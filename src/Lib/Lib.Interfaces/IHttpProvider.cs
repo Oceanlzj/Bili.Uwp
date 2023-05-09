@@ -37,7 +37,22 @@ namespace Bili.Lib.Interfaces
         /// <param name="needCookie">是否需要cookie.</param>
         /// <param name="needAppKey">是否需要appKey.</param>
         /// <returns><see cref="HttpRequestMessage"/>.</returns>
-        Task<HttpRequestMessage> GetRequestMessageAsync(HttpMethod method, string url, Dictionary<string, string> queryParams = null, RequestClientType type = RequestClientType.Android, bool needToken = false, string additionalQuery = "", bool needCookie = false, bool needAppKey = false);
+        // Task<HttpRequestMessage> GetRequestMessageAsync(HttpMethod method, string url, Dictionary<string, string> queryParams = null, RequestClientType type = RequestClientType.Android, bool needToken = false, string additionalQuery = "", bool needCookie = false, bool needAppKey = false);
+
+        /// <summary>
+        /// 获取 <see cref="HttpRequestMessage"/>.
+        /// </summary>
+        /// <param name="method">请求方法.</param>
+        /// <param name="url">请求地址.</param>
+        /// <param name="queryParams">查询参数.</param>
+        /// <param name="type">需要模拟的设备类型.</param>
+        /// <param name="needToken">是否需要令牌.</param>
+        /// <param name="additionalQuery">附加查询参数.</param>
+        /// <param name="needCookie">是否需要cookie.</param>
+        /// <param name="needAppKey">是否需要appKey.</param>
+        /// <param name="forceNoToken">是否强制不AccessKey.</param>
+        /// <returns><see cref="HttpRequestMessage"/>.</returns>
+        Task<HttpRequestMessage> GetRequestMessageAsync(HttpMethod method, string url, Dictionary<string, string> queryParams = null, RequestClientType type = RequestClientType.Android, bool needToken = false, string additionalQuery = "", bool needCookie = false, bool needAppKey = false, bool forceNoToken = false);
 
         /// <summary>
         /// 获取 <see cref="HttpRequestMessage"/>.

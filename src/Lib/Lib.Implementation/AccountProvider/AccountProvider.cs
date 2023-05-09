@@ -121,7 +121,7 @@ namespace Bili.Lib
                 { Query.VMid, userId },
             };
 
-            var request = await _httpProvider.GetRequestMessageAsync(HttpMethod.Get, Account.Space, queryParameters);
+            var request = await _httpProvider.GetRequestMessageAsync(HttpMethod.Get, Account.Space, queryParameters, needToken: false, forceNoToken: true);
             var response = await _httpProvider.SendAsync(request);
             var result = await _httpProvider.ParseAsync<ServerResponse<UserSpaceResponse>>(response);
             var accInfo = _userAdapter.ConvertToAccountInformation(result.Data.User, AvatarSize.Size96);
