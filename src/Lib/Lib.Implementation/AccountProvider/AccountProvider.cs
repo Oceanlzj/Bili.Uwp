@@ -144,7 +144,7 @@ namespace Bili.Lib
                 { Query.Order, "pubdate" },
             };
 
-            var request = await _httpProvider.GetRequestMessageAsync(HttpMethod.Get, Account.VideoCursor, queryParameters);
+            var request = await _httpProvider.GetRequestMessageAsync(HttpMethod.Get, Account.VideoCursor, queryParameters, needToken: false, forceNoToken: true);
             var response = await _httpProvider.SendAsync(request);
             var result = await _httpProvider.ParseAsync<ServerResponse<UserSpaceVideoSet>>(response);
             var data = _videoAdapter.ConvertToVideoSet(result.Data);
