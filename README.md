@@ -1,3 +1,6 @@
+#本仓库Fork自https://github.com/Richasy/Bili.Uwp
+（心血来潮想做一点自己的魔改罢了）
+
 <p align="center">
 <img src="https://i.loli.net/2020/08/30/sn8ov9cYDCGeWPk.png"/>
 </p>

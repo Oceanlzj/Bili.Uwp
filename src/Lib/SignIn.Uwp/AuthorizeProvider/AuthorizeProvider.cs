@@ -124,6 +124,7 @@ namespace Bili.SignIn.Uwp
         }
 
         /// <inheritdoc/>
+
         public async Task<string> GenerateAuthorizedQueryStringAsync(Dictionary<string, string> queryParameters, RequestClientType clientType, bool needToken = true, bool forcrNoToken = false)
         {
             var parameters = await GenerateAuthorizedQueryDictionaryAsync(queryParameters, clientType, needToken, forcrNoToken);
