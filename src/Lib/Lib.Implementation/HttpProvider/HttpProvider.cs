@@ -96,7 +96,6 @@ namespace Bili.Lib
             else if (method == HttpMethod.Get || method == HttpMethod.Delete)
             {
                 var query = await _authenticationProvider.GenerateAuthorizedQueryStringAsync(queryParams, clientType, needToken, forceNoToken);
-
                 if (!string.IsNullOrEmpty(additionalQuery))
                 {
                     query += $"&{additionalQuery}";
