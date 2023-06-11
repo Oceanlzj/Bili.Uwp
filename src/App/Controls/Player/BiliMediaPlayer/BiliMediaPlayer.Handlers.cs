@@ -231,7 +231,7 @@ namespace Bili.App.Controls.Player
             {
                 // 获取单位像素对应的时长
                 var unit = ViewModel.DurationSeconds / ActualWidth;
-                _manipulationUnitLength = unit / 1.5;
+                _manipulationUnitLength = 0.02;
             }
         }
 
